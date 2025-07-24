@@ -18,7 +18,7 @@ def ejercicio1_prueba(locals_dict) -> bool:
     if anio_nacimiento is None:
         print("Error: La variable anio_nacimiento no fué definida.")
         return False
-    if type(anio_nacimiento) is not int:
+    if not isinstance(anio_nacimiento, int):
         print("Error: La variable anio_nacimiento no coincide con el tipo esperado.")
         return False
     if anio_nacimiento <= 0:
@@ -84,13 +84,16 @@ def ejercicio2_prueba(locals_dict) -> bool:
     if galones is None:
         print("Error: La variable galones no fue definida. Revisa si está bien escrita")
         return False
+    if not isinstance(galones, float):
+        print("Error: La variable galones no coincide con el tipo esperado")
+        return False
     if galones < 0:
         print("Error: La variable galones debe tener un valor igual o superior a cero")
         return False
     if litros is None:
         print("Error: La variable litros no fue definida. Revisa si está bien escrita")
         return False
-    if type(litros) is not float:
+    if not isinstance(litros, float):
         print("Error: La variable litros no coincide con el tipo esperado")
         return False
     if round(litros, 2) != round(galones * 3.78541, 2):
@@ -142,7 +145,7 @@ def ejercicio3_prueba(locals_dict) -> bool:
     if monto is None:
         print("Error: La variable monto no tiene valor definido.")
         return False
-    if type(monto) is not float:
+    if not isinstance(monto, float):
         print("Error: La variable monto no coincide con el tipo esperado.")
         return False
     if monto <= 0:
@@ -151,7 +154,7 @@ def ejercicio3_prueba(locals_dict) -> bool:
     if interes is None:
         print("Error: La variable interes no tiene valor definido.")
         return False
-    if type(interes) is not float:
+    if not isinstance(interes, float):
         print("Error: La variable interes no coincide con el tipo esperado.")
         return False
     if interes < 0:
@@ -160,7 +163,7 @@ def ejercicio3_prueba(locals_dict) -> bool:
     if cuotas is None:
         print("Error: La variable cuotas no tiene valor definido.")
         return False
-    if type(cuotas) is not int:
+    if not isinstance(cuotas, int):
         print("Error: La variable cuotas no coincide con el tipo esperado.")
         return False
     if cuotas <= 0:
@@ -169,7 +172,7 @@ def ejercicio3_prueba(locals_dict) -> bool:
     if primera_cuota is None:
         print("Error: La variable cuota no tiene valor definido.")
         return False
-    if type(primera_cuota) is not float:
+    if not isinstance(primera_cuota, float):
         print("Error: La variable cuota no coincide con el tipo esperado.")
         return False
     if round(primera_cuota, 2) != round(
@@ -234,7 +237,7 @@ def ejercicio4_prueba(locals_dict) -> bool:
     if edad is None:
         print("Error: La variable edad no tiene valor definido.")
         return False
-    if type(edad) is not int:
+    if not isinstance(edad, int):
         print("Error: La variable edad no coincide con el tipo esperado.")
         return False
     if edad < 0:
@@ -250,13 +253,13 @@ def ejercicio4_prueba(locals_dict) -> bool:
     if adulto is None:
         print("Error: La variable adulto no tiene valor definido.")
         return False
-    if type(adulto) is not bool:
+    if not isinstance(adulto, bool):
         print("Error: La variable adulto no coincide con el tipo esperado.")
         return False
     if autorizacion is None:
         print("Error: La variable autorizacion no tiene valor definido.")
         return False
-    if type(autorizacion) is not bool:
+    if not isinstance(autorizacion, bool):
         print("Error: La variable autorizacion no coincide con el tipo esperado.")
         return False
     autorizacion_correcta = (
