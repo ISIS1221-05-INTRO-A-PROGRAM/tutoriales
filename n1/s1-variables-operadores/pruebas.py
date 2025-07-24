@@ -145,7 +145,7 @@ def ejercicio3_prueba(locals_dict) -> bool:
     if monto is None:
         print("Error: La variable monto no tiene valor definido.")
         return False
-    if not isinstance(monto, float):
+    if not isinstance(monto, int):
         print("Error: La variable monto no coincide con el tipo esperado.")
         return False
     if monto <= 0:
@@ -170,19 +170,21 @@ def ejercicio3_prueba(locals_dict) -> bool:
         print("Error: El valor de la variable cuotas debe ser mayor a cero.")
         return False
     if primera_cuota is None:
-        print("Error: La variable cuota no tiene valor definido.")
+        print("Error: La variable primera_cuota no tiene valor definido.")
         return False
     if not isinstance(primera_cuota, float):
-        print("Error: La variable cuota no coincide con el tipo esperado.")
+        print("Error: La variable primera_cuota no coincide con el tipo esperado.")
         return False
     if round(primera_cuota, 2) != round(
         monto
         * ((interes * ((1 + interes) ** cuotas)) / (((1 + interes) ** cuotas) - 1)),
         2,
     ):
-        print("Error: El valor de la variable cuota no coincide con el esperado")
+        print(
+            "Error: El valor de la variable primera_cuota no coincide con el esperado"
+        )
         return False
-    print("Correcto, la cuota es de:", primera_cuota)
+    print("Correcto, la primera_cuota es de:", primera_cuota)
     return True
 
 
