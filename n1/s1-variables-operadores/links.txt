@@ -1,0 +1,1 @@
+https://colab.research.google.com/github/ISIS1221-05-INTRO-A-PROGRAM/tutoriales/blob/main/n1/s1-variables-operadores/s1-variables-tipos-y-operadores.ipynb
